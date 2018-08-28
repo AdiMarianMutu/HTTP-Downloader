@@ -213,7 +213,7 @@ namespace HTTP_Downloader {
             // Parsing the file which contains the URLs list
             // Before starting: We verify the existence of the 'Output Directory'/'URLs List File'
             if (!Directory.Exists(DownloadedFiles_OutputDirectory))
-                _Debug.WriteFatalError("The output directory where the downloaded files would be saved doesn't exists!");
+                _Debug.WriteFatalError("The output directory where the downloaded files should be saved doesn't exists!");
 
             if (File.Exists(URLsFileList)) {
                 // Enumerating the lines in the file
