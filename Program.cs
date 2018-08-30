@@ -47,8 +47,8 @@ namespace HTTP_Downloader {
                         Console.WriteLine("[INFO]: Downloading the '{0}' file...", fileName);
 
                         // We create the request by using the 'get' method
-                        HttpWebRequest httpWebRequest        = (HttpWebRequest)WebRequest.Create(url);
-                                       httpWebRequest.Method = WebRequestMethods.Http.Get;
+                        HttpWebRequest httpWebRequest           = (HttpWebRequest)WebRequest.Create(url);
+                                       httpWebRequest.Method    = WebRequestMethods.Http.Get;
                         // We need to set also an User Agent to avoid a 403 error response from the server
                                        httpWebRequest.UserAgent = ".NET Framework HTTP Protocol Download File Test";
                         // By default the maximum connection allowed at once is limited to 2, we need to extend it using the value of the 'Maximum_NumberOfConcurrentThreads'
