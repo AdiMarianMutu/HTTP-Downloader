@@ -57,7 +57,7 @@ namespace HTTP_Downloader {
         }
         
         static void Main(string[] args) {
-            args = new string[8];
+            /*args = new string[8];
             args[0] = "-f";
             args[1] = @"C:\Users\Mutu.A\Desktop\urls.txt"; // URLs list file
             args[2] = "-o";
@@ -65,7 +65,7 @@ namespace HTTP_Downloader {
             args[4] = "-n";
             args[5] = "2";                                 // Number of concurrent threads
             args[6] = "-l";
-            args[7] = "0";                                 // Speed limit
+            args[7] = "0";                                 // Speed limit*/
 
             // Parsing the given arguments
             string URLsFileList                    = _Debug.GetArgument('f', args);

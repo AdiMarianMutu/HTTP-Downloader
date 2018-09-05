@@ -3,7 +3,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System.Text;
 using System.Diagnostics;
-using HTTP_Downloader;
 
 namespace DownloadFile.UnitTest {
     [TestClass]
@@ -59,7 +58,7 @@ namespace DownloadFile.UnitTest {
             VerifyResources(fullPath);
 
             // Act
-            Program.HTTPDownloader.DownloadFile(URL_5MBFile, OutputPath, Name_5MBFile);
+            HTTPDownloader.DownloadFile(URL_5MBFile, OutputPath, Name_5MBFile);
 
             // Assert
             Assert.AreEqual(expected_md5Digest, GetMD5DigestHash(fullPath));
@@ -74,7 +73,7 @@ namespace DownloadFile.UnitTest {
             VerifyResources(fullPath);
 
             // Act
-            Program.HTTPDownloader.DownloadFile(URL_10MBFile, OutputPath, Name_10MBFile);
+            HTTPDownloader.DownloadFile(URL_10MBFile, OutputPath, Name_10MBFile);
 
             // Assert
             Assert.AreEqual(expected_md5Digest, GetMD5DigestHash(fullPath));
@@ -89,7 +88,7 @@ namespace DownloadFile.UnitTest {
             VerifyResources(fullPath);
 
             // Act
-            Program.HTTPDownloader.DownloadFile(URL_20MBFile, OutputPath, Name_20MBFile);
+            HTTPDownloader.DownloadFile(URL_20MBFile, OutputPath, Name_20MBFile);
 
             // Assert
             Assert.AreEqual(expected_md5Digest, GetMD5DigestHash(fullPath));
@@ -111,7 +110,7 @@ namespace DownloadFile.UnitTest {
 
             // Act
             stopWatch.Start();
-            Program.HTTPDownloader.DownloadFile(URL_5MBFile, OutputPath, Name_5MBFile, 125000); // The download speed will be limited to 1Mbit/s
+            HTTPDownloader.DownloadFile(URL_5MBFile, OutputPath, Name_5MBFile, 125000); // The download speed will be limited to 1Mbit/s
             stopWatch.Stop();
 
             // Assert
@@ -132,7 +131,7 @@ namespace DownloadFile.UnitTest {
 
             // Act
             stopWatch.Start();
-            Program.HTTPDownloader.DownloadFile(URL_10MBFile, OutputPath, Name_10MBFile, 250000); // The download speed will be limited to 2Mbit/s
+            HTTPDownloader.DownloadFile(URL_10MBFile, OutputPath, Name_10MBFile, 250000); // The download speed will be limited to 2Mbit/s
             stopWatch.Stop();
 
             // Assert
@@ -153,7 +152,7 @@ namespace DownloadFile.UnitTest {
 
             // Act
             stopWatch.Start();
-            Program.HTTPDownloader.DownloadFile(URL_20MBFile, OutputPath, Name_20MBFile, 500000); // The download speed will be limited to 4Mbit/s
+            HTTPDownloader.DownloadFile(URL_20MBFile, OutputPath, Name_20MBFile, 500000); // The download speed will be limited to 4Mbit/s
             stopWatch.Stop();
 
             // Assert
